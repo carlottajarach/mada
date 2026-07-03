@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Scarica tutte le immagini del sito dentro la cartella images/
+# Uso:  bash scarica-immagini.sh
+set -e
+cd "$(dirname "$0")/images"
+echo "Scarico 22 immagini..."
+
+curl -fSL "https://static.wixstatic.com/media/e51f31_32b0a12a79ff4bcc999b7c45cd715538~mv2.png" -o "logo.png" && echo "  ok  logo.png"
+curl -fSL "https://static.wixstatic.com/media/e51f31_f0c89242f1f24240a3ca2477e796f2d6~mv2.png" -o "logo-pink.png" && echo "  ok  logo-pink.png"
+curl -fSL "https://static.wixstatic.com/media/e1aa082f7c0747168d9cf43e77046142.png" -o "social-instagram.png" && echo "  ok  social-instagram.png"
+curl -fSL "https://static.wixstatic.com/media/4057345bcf57474b96976284050c00df.png" -o "social-facebook.png" && echo "  ok  social-facebook.png"
+curl -fSL "https://static.wixstatic.com/media/11062b_69d309d6dbde492fae325fb0deca6556~mv2.png" -o "social-tiktok.png" && echo "  ok  social-tiktok.png"
+curl -fSL "https://static.wixstatic.com/media/aa0402eb9ba2430d9d0620b59556efca.png" -o "social-linkedin.png" && echo "  ok  social-linkedin.png"
+curl -fSL "https://static.wixstatic.com/media/11062b_81cefb1bd2e2490d892a1cad5cc1cd8a~mv2.png" -o "social-x.png" && echo "  ok  social-x.png"
+curl -fSL "https://static.wixstatic.com/media/45bce1d726f64f1999c49feae57f6298.png" -o "social-youtube.png" && echo "  ok  social-youtube.png"
+curl -fSL "https://static.wixstatic.com/media/48a2a42b19814efaa824450f23e8a253.png" -o "icon-linkedin-profile.png" && echo "  ok  icon-linkedin-profile.png"
+curl -fSL "https://static.wixstatic.com/media/1cd938_b2b1a86877d84f8bb7c646d7e0a69a5c~mv2.jpg" -o "team-shirley.jpg" && echo "  ok  team-shirley.jpg"
+curl -fSL "https://static.wixstatic.com/media/e51f31_6983c3e4fc024089bb30eecd551a2dca~mv2.jpg" -o "team-sharon.jpg" && echo "  ok  team-sharon.jpg"
+curl -fSL "https://static.wixstatic.com/media/e51f31_561a3bf91ca145bda8af2a3e0e7053a4~mv2.jpg" -o "team-carlotta.jpg" && echo "  ok  team-carlotta.jpg"
+curl -fSL "https://static.wixstatic.com/media/e51f31_bc8aa51186f2420ab504a10c56a69b3f~mv2.png" -o "partner-airc.png" && echo "  ok  partner-airc.png"
+curl -fSL "https://static.wixstatic.com/media/e51f31_1900447e86444fa88ac4c739e6f6513b~mv2.png" -o "partner-cicap.png" && echo "  ok  partner-cicap.png"
+curl -fSL "https://static.wixstatic.com/media/e51f31_9b7a276f51694bf3b90ec2f65d6dae74~mv2.png" -o "partner-science.png" && echo "  ok  partner-science.png"
+curl -fSL "https://static.wixstatic.com/media/e51f31_810f37620a744e0e9ac7b937017dfc1b~mv2.png" -o "partner-agora.png" && echo "  ok  partner-agora.png"
+curl -fSL "https://static.wixstatic.com/media/e51f31_9eb032f71c0148ff9dd410de444356bb~mv2.png" -o "evento-tuscia.png" && echo "  ok  evento-tuscia.png"
+curl -fSL "https://static.wixstatic.com/media/e51f31_1b0cc390e00b47a7a227c59ae0821f49~mv2.png" -o "evento-sync.png" && echo "  ok  evento-sync.png"
+curl -fSL "https://static.wixstatic.com/media/e51f31_d28252ceb8f44f37b37fb516bfab5437~mv2.png" -o "evento-beatrice.png" && echo "  ok  evento-beatrice.png"
+curl -fSL "https://static.wixstatic.com/media/e51f31_b3940206a1bf457dac0399df5ad69f01~mv2.jpg" -o "post-trieste.jpg" && echo "  ok  post-trieste.jpg"
+curl -fSL "https://static.wixstatic.com/media/nsplsh_6c2f2348983e49d98296483799ef2551~mv2.jpg" -o "post-soldi.jpg" && echo "  ok  post-soldi.jpg"
+curl -fSL "https://static.wixstatic.com/media/e51f31_f1bca035987e4516b15881b6af002d40~mv2.png" -o "post-oppioidi.png" && echo "  ok  post-oppioidi.png"
+echo "Fatto! Immagini salvate in images/"
