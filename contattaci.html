@@ -9,6 +9,39 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Contatti — componenti specifici della pagina (inline: indipendenti da css/style.css) */
+    .mail-card{
+      position:relative; overflow:hidden; text-align:center;
+      max-width:620px; margin:0 auto;
+      background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+      box-shadow:var(--shadow); padding:46px 32px 36px;
+    }
+    .mail-card::before{
+      content:""; position:absolute; left:0; right:0; top:0; height:6px;
+      background:linear-gradient(90deg,var(--rosa),var(--verde),var(--azzurro),var(--violetto));
+    }
+    .mail-card .mail-label{ margin:0 0 8px; color:var(--muted); font-weight:600; }
+    .mail-card .big-mail{
+      display:inline-block; margin:0 0 24px;
+      font-family:"Poppins",sans-serif; font-weight:700;
+      font-size:clamp(1.3rem,3.6vw,1.9rem); color:var(--azzurro-scuro); word-break:break-word;
+    }
+    .mail-card .mail-note{ margin:20px 0 0; color:var(--muted); font-size:.92rem; }
+
+    .channels{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; max-width:840px; margin:0 auto; }
+    .channel{
+      display:flex; align-items:center; gap:14px;
+      background:#fff; border:1px solid var(--line); border-radius:14px; padding:16px 18px;
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+    .channel:hover{ transform:translateY(-3px); box-shadow:var(--shadow); text-decoration:none; }
+    .channel img{ width:30px; height:30px; flex:0 0 30px; opacity:.9; }
+    .channel .c-name{ font-family:"Poppins",sans-serif; font-weight:700; color:var(--ink); line-height:1.15; }
+    .channel .c-handle{ color:var(--muted); font-size:.88rem; }
+    @media(max-width:760px){ .channels{ grid-template-columns:repeat(2,1fr); } }
+    @media(max-width:460px){ .channels{ grid-template-columns:1fr; } }
+  </style>
 </head>
 <body>
 <header class="site-header">
@@ -41,21 +74,65 @@
 <section class="hero">
   <div class="container">
     <span class="kicker">Contattaci</span>
-    <h1>Contattaci</h1>
-    <p>Hai dubbi, curiosità, domande? Vuoi collaborare con Mada? Contattaci, ti risponderemo subito :)</p>
+    <h1>Facciamo due chiacchiere</h1>
+    <p>Domande, curiosità, un'idea da proporci o voglia di fare divulgazione con noi? Siamo a un messaggio di distanza.</p>
   </div>
 </section>
 
 <section>
-  <div class="container contact-wrap">
-    <div class="contact-card">
-      <p>Scrivici una mail a</p>
+  <div class="container">
+    <div class="mail-card">
+      <p class="mail-label">Scrivici una mail a</p>
       <a class="big-mail" href="mailto:madaadvances@gmail.com">madaadvances@gmail.com</a>
+      <div>
+        <a class="btn" href="mailto:madaadvances@gmail.com?subject=Ciao%20Mada">Scrivi ora</a>
+      </div>
+      <p class="mail-note">Di solito rispondiamo in fretta :)</p>
     </div>
-    <div class="contact-card">
-      <p>Oppure scrivici su</p>
-      <a class="btn" href="https://www.instagram.com/madaadvances/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Sui social</span>
+      <h2>Ci trovi anche qui</h2>
+      <p>Scegli il canale che preferisci — rispondiamo volentieri anche in DM.</p>
     </div>
+    <div class="channels">
+      <a class="channel" href="https://www.instagram.com/madaadvances/" target="_blank" rel="noopener">
+        <img src="https://static.wixstatic.com/media/e1aa082f7c0747168d9cf43e77046142.png" alt="">
+        <div><div class="c-name">Instagram</div><div class="c-handle">@madaadvances</div></div>
+      </a>
+      <a class="channel" href="https://www.facebook.com/madadvances/" target="_blank" rel="noopener">
+        <img src="https://static.wixstatic.com/media/4057345bcf57474b96976284050c00df.png" alt="">
+        <div><div class="c-name">Facebook</div><div class="c-handle">MadaAdvances</div></div>
+      </a>
+      <a class="channel" href="https://www.tiktok.com/@madaadvances" target="_blank" rel="noopener">
+        <img src="https://static.wixstatic.com/media/11062b_69d309d6dbde492fae325fb0deca6556~mv2.png" alt="">
+        <div><div class="c-name">TikTok</div><div class="c-handle">@madaadvances</div></div>
+      </a>
+      <a class="channel" href="https://www.linkedin.com/company/mada-advances/about/" target="_blank" rel="noopener">
+        <img src="https://static.wixstatic.com/media/aa0402eb9ba2430d9d0620b59556efca.png" alt="">
+        <div><div class="c-name">LinkedIn</div><div class="c-handle">Mada Advances</div></div>
+      </a>
+      <a class="channel" href="https://www.youtube.com/channel/UCUVxvWn72L9n9fy4t_lFPtg" target="_blank" rel="noopener">
+        <img src="https://static.wixstatic.com/media/45bce1d726f64f1999c49feae57f6298.png" alt="">
+        <div><div class="c-name">YouTube</div><div class="c-handle">Mada Advances</div></div>
+      </a>
+      <a class="channel" href="https://twitter.com/madaadvances" target="_blank" rel="noopener">
+        <img src="https://static.wixstatic.com/media/11062b_81cefb1bd2e2490d892a1cad5cc1cd8a~mv2.png" alt="">
+        <div><div class="c-name">X</div><div class="c-handle">@madaadvances</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Un'idea o una collaborazione?</h2>
+    <p>Che tu voglia proporci un progetto, un evento o unirti al team, scrivici: ci fa sempre piacere.</p>
+    <a class="btn" href="mailto:madaadvances@gmail.com?subject=Proposta%20per%20Mada">Proponici qualcosa</a>
   </div>
 </section>
 </main>
