@@ -296,7 +296,9 @@ section.tint { background: var(--soft); }
 .cta-band .btn:hover { color: var(--rosa-scuro); }
 
 /* ---------- Footer ---------- */
-.site-footer { background: #fff; border-top: 1px solid var(--line); padding: 40px 0 30px; }
+.site-footer { position: relative; background: #fff; padding: 44px 0 30px; }
+.site-footer::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--rosa), var(--azzurro), var(--verde), var(--violetto)); }
 .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center; }
 .footer-nav ul { display: flex; flex-wrap: wrap; gap: 6px 4px; list-style: none; margin: 0; padding: 0; justify-content: center; }
 .footer-nav a { padding: 6px 12px; border-radius: 999px; color: var(--ink); font-weight: 600; font-size: .95rem; }
