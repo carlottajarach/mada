@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>La matematica dietro le epidemie | Mada Advances</title>
+  <meta name="description" content="I numeri di COVID-19 scendono difficilmente; come mai? Come possiamo interpretare questi dati seppur parziali?">
+  <link rel="canonical" href="https://www.madaadvances.com/post/la-matematica-dietro-le-epidemie/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Mada Advances">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:title" content="La matematica dietro le epidemie">
+  <meta property="og:description" content="I numeri di COVID-19 scendono difficilmente; come mai? Come possiamo interpretare questi dati seppur parziali?">
+  <meta property="og:url" content="https://www.madaadvances.com/post/la-matematica-dietro-le-epidemie/">
+  <meta property="og:image" content="https://static.wixstatic.com/media/1cd938_237ad3cf8f9e44a5a6f06f7a10ec8fd8~mv2.jpg/v1/fill/w_1000,h_978,al_c,q_85,usm_0.66_1.00_0.01/1cd938_237ad3cf8f9e44a5a6f06f7a10ec8fd8~mv2.jpg">
+  <meta property="article:published_time" content="2020-04-19">
+  <meta property="article:author" content="Carlotta Jarach">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.madaadvances.com/css/style.css">
+
+  <style>
+    .article-wrap{max-width:760px;margin:0 auto;padding:0 20px;}
+    .article-head{padding:52px 0 6px;text-align:center;}
+    .article-cat{font-family:"Poppins",sans-serif;font-weight:700;letter-spacing:.12em;
+      text-transform:uppercase;font-size:.78rem;color:#b0505a;}
+    .article-head h1{font-family:"Poppins",sans-serif;font-weight:700;color:#2b2b33;
+      font-size:clamp(1.7rem,4.5vw,2.6rem);line-height:1.15;margin:.4em 0 .3em;}
+    .article-meta{color:#6b6b76;font-size:.95rem;}
+    .article-rule{height:5px;width:64px;margin:20px auto 0;border-radius:99px;
+      background:linear-gradient(90deg,#df8991,#89dfd7,#ac89df);}
+    .article-hero{max-width:100%;height:auto;border-radius:16px;margin:26px 0 8px;
+      box-shadow:0 14px 40px rgba(30,60,90,.18);}
+    .article-body{font-family:"Nunito Sans",sans-serif;color:#2b2b33;font-size:1.08rem;
+      line-height:1.75;padding:14px 0 8px;}
+    .article-body p{margin:0 0 1.2em;}
+    .article-body a{color:#b0505a;text-decoration:underline;text-underline-offset:2px;}
+    .article-body h2{font-family:"Poppins",sans-serif;font-weight:700;color:#1f7a70;
+      font-size:1.5rem;margin:1.8em 0 .5em;}
+    .article-body h3{font-family:"Poppins",sans-serif;font-weight:600;color:#2b2b33;
+      font-size:1.2rem;margin:1.4em 0 .4em;}
+    .article-body ul,.article-body ol{margin:0 0 1.2em;padding-left:1.3em;}
+    .article-body li{margin:.35em 0;}
+    .article-body blockquote{margin:1.6em 0;padding:.6em 1.2em;border-left:4px solid #df8991;
+      background:#fbe7e9;border-radius:0 12px 12px 0;color:#2b2b33;}
+    .article-body img{max-width:100%;height:auto;border-radius:14px;margin:1.4em 0;
+      box-shadow:0 12px 34px rgba(30,60,90,.16);}
+    .article-body figure{margin:1.6em 0;}
+    .article-body figcaption{color:#6b6b76;font-size:.9rem;text-align:center;margin-top:.5em;}
+    .article-sign{font-family:"Poppins",sans-serif;font-weight:700;color:#1f7a70;margin:1.6em 0 0;}
+    .article-tags{display:flex;flex-wrap:wrap;gap:8px;padding:22px 0 4px;border-top:1px solid #eaeaf0;margin-top:26px;}
+    .article-tags span{background:#f3fbfa;border:1px solid #eaeaf0;color:#6b6b76;
+      font-family:"Nunito Sans",sans-serif;font-size:.82rem;padding:4px 12px;border-radius:99px;}
+    .article-foot{border-top:1px solid #eaeaf0;padding:26px 0 60px;text-align:center;margin-top:20px;}
+    .article-foot .btn{margin:6px;}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="https://www.madaadvances.com/index.html">
+      <img src="https://www.madaadvances.com/images/logo.png" alt="Logo Mada Advances">
+      <span class="name">mada <span>advances</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Apri menu" aria-expanded="false">&#9776;</button>
+    <nav class="main-nav" aria-label="Menu principale">
+      <ul>
+        <li><a href="https://www.madaadvances.com/index.html">Home</a></li>
+        <li><a href="https://www.madaadvances.com/chisiamo.html">Chi siamo</a></li>
+        <li><a href="https://www.madaadvances.com/cosafacciamo.html">Cosa facciamo</a></li>
+        <li><a href="https://www.madaadvances.com/portfolio.html">Portfolio</a></li>
+        <li><a href="https://www.madaadvances.com/contattaci.html">Contattaci</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<article class="article-wrap">
+  <div class="article-head">
+    <p class="article-cat">Mada Magazine</p>
+    <h1>La matematica dietro le epidemie</h1>
+    <p class="article-meta">di Carlotta Jarach &middot; 19 aprile 2020</p>
+    <div class="article-rule"></div>
+  </div>
+
+  <img class="article-hero"
+       src="https://static.wixstatic.com/media/1cd938_237ad3cf8f9e44a5a6f06f7a10ec8fd8~mv2.jpg/v1/fill/w_1000,h_978,al_c,q_85,usm_0.66_1.00_0.01/1cd938_237ad3cf8f9e44a5a6f06f7a10ec8fd8~mv2.jpg"
+       alt="La matematica dietro le epidemie">
+
+  <div class="article-body">
+    <p>Per settimane, il bollettino della Protezione Civile ha rappresentato un appuntamento fisso giornaliero (ora diventato bisettimanale), dove venivamo aggiornati sulle informazioni riguardanti contagi, guarigioni, e decessi del Coronavirus, delle ultime ventiquattro ore. È passato più di un mese dall’inizio del <em>lockdown</em> in Italia. Eppure la situazione non sembra esser cambiata repentinamente: il numero dei contagi giornalieri è rimasto a lungo invariato, con difficoltà a prevedere il punto di svolta. La domanda quindi sorge spontanea: come mai i numeri scendono difficilmente? Come possiamo interpretare questi dati seppur parziali? <a href="https://www.madaadvances.com/post/coronavirus-quando-finir%2525c3%2525a0-come-si-stima-la-fine-di-una-pandemia" target="_blank" rel="noopener">(Coronavirus, quando finirà?</a>). Iniziamo a spiegare facendo riferimento a ciò che i matematici chiamano "crescita esponenziale”.</p>
+
+    <p class="article-sign">Crescita Esponenziale</p>
+
+    <p>Nei primi di marzo, si è passati in pochissimi giorni da un paio di casi a decine di migliaia di casi: i contagi stavano crescendo ad un tasso esponenziale. A differenza della crescita lineare, in cui l’aumento giornaliero rimane invariato, qui l’incremento è pari ad una <a href="https://it.wikipedia.org/wiki/crescita_esponenziale" target="_blank" rel="noopener">frazione del totale</a> dei contagiati. In poche parole, l’aumento è <em>percentuale</em> al valore corrente <em>.</em> Per capire meglio, pensiamo ad un numero che <strong>raddoppia</strong> (quindi aumenta di un fattore 2) ogni giorno: all’inizio è 1, il giorno dopo 2, poi 4, poi 8… Quanti giorni occorreranno per arrivare ad 1 milione? 20. E per arrivare a 2 milioni? Basterà un giorno in più.</p>
+
+    <p>La crescita del virus non sembra avere queste dimensioni, ma s <a href="https://www.thelancet.com/journals/lancet/article/piis0140-6736(20" target="_blank" rel="noopener">econdo una ricerca di</a>30260-9/fulltext) <a href="https://www.thelancet.com/journals/lancet/article/piis0140-6736(20" target="_blank" rel="noopener">The Lancet</a>30260-9/fulltext), inizialmente in Cina questa crescita era di circa il 30%. Solitamente, quando si parla di crescita esponenziale è importante considerare il numero di raddoppio. Nel nostro esempio immaginario, il raddoppio era giornaliero, mentre con covid19 sembra che i contagiati raddoppiavano circa ogni 6 giorni. Continuando con questo andamento, secondo <a href="https://www.cmjornal.pt/cm-ao-minuto/detalhe/estudo-preve-que-coronavirus-mate-15-milhoes-de-pessoas-no-melhor-dos-cenarios?ref=hp_primeirosdestaques" target="_blank" rel="noopener">uno studio</a>, avremmo potuto raggiungere i 15 milioni di decessi mondiali.</p>
+
+    <p>La crescita esponenziale è una delle peggiori ed è particolarmente devastante. L’andamento inizia con numeri piccoli e apparentemente contenuti, che in brevissimo tempo però diventano ingestibili. Tristemente, è solo dopo che la situazione è già sfuggita di mano che se ne percepisce la gravità. Da un punto di vista di sanità pubblica, per controllare e contenere questo andamento è necessario far sì che ogni persona contagiata infetti il minor numero possibile d’individui. Questo significa contenere quel numero noto come <strong>“valore erre zero” (R0).</strong></p>
+
+    <p class="article-sign">Il Modello SIR e valore R0.</p>
+
+    <p>I <strong>modelli compartimentali</strong> sono utilizzati in epidemiologia dai matematici per descrivere il progresso delle epidemie. La parola <strong>compartimentale</strong> deriva dall’idea di dividere la popolazione in categorie, compartimenti, aventi esse caratteristiche diverse e proprie. Uno dei modelli comunemente utilizzati è il <strong>modello SIR,</strong> dove l’acronimo sta per <strong>S</strong> uscettibili, <strong>I</strong> nfetti e Guariti/Deceduti (dall’inglese <strong>R</strong> ecovered). Secondo il modello, ogni individuo passerà attraverso ognuna delle fasi. Per semplificare l’esecuzione dei calcoli, si fanno diverse assunzioni: la popolazione deve rimanere invariata (nessuno entra, nessuno esce), i tassi dell’epidemia rimangono gli stessi, e non si può regredire da una fase all’altra, ma solo progredire in avanti, come mostrato in figura.</p>
+
+    <img src="https://static.wixstatic.com/media/e51f31_95cecae3ac194c718dacad64e4f74484~mv2.png/v1/fill/w_740,h_127,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e51f31_95cecae3ac194c718dacad64e4f74484~mv2.png" alt="La matematica dietro le epidemie">
+
+    <p>Alcuni modelli includono l’aggiunta di altre categorie: ad esempio, per il Coronavirus <a href="http://deeconometrist.nl/the-math-behind-the-coronavirus/" target="_blank" rel="noopener">si</a> <a href="http://deeconometrist.nl/the-math-behind-the-coronavirus/" target="_blank" rel="noopener">inserisce la fase “Esposti"</a>, che avviene fra Suscettibili ed Infetti. Per questo infatti, si parla spesso del modello S <strong>E</strong> IR. Per capire quindi il valore “erre zero”, riferendoci al semplice modello SIR, dobbiamo definire <strong>β</strong> come il <em>numero di contatti moltiplicato per probabilità di trasmissione</em>, e <strong>γ</strong> come il <em>tasso di guarigione o tasso decesso.</em> Per ricavare il <a href="https://wwwnc.cdc.gov/eid/article/25/1/17-1901_article" target="_blank" rel="noopener">numero base di riproduzione</a>, [](http://www.apple.com/it/) dovremo dividere queste due entità, e otterremo che R₀= β/γ. Questo rapporto <strong>determina il numero di persone che, in media, ogni individuo infetto contagia a sua volta</strong>, ed è fondamentale per analizzare la gravità e l’andamento di un virus. In altre parole se l'R0 di una malattia infettiva è 2, significa che in media un singolo malato infetterà due persone. Per riferimento, la SARS ha R0 di 4, il Morbillo di 10, e la Spagnola di 2. <a href="https://www.who.int/news-room/detail/23-01-2020-statement-on-the-meeting-of-the-international-health-regulations-(2005" target="_blank" rel="noopener">Secondo l’OMS</a>-emergency-committee-regarding-the-outbreak-of-novel-coronavirus-(2019-ncov)) per il Coronavirus è stimato fra 1,5 e 3, e spiega in larga misura la natura esponenziale dell’epidemia.</p>
+
+    <p>Più alto è il valore, e più risulta difficile gestire l’epidemia. Finché sarà al di sopra di 1, anche se di pochissimo, i contagi continueranno ad aumentare in maniera esponenziale. Ma come si può abbassare l’R0? Modificando la probabilità di trasmissione, la durata dell’infettività o il numero dei contatti degli infetti; i primi due elementi non sono modificabili senza un vaccino o un trattamento specifico, e siamo quindi constretti a focalizzarci sulla riduzione del numero di contagi. In questa maniera possiamo controllare, o almeno ritardare, la diffusione del patogeno ad altre persone. L’obiettivo di sanità pubblica è quello di riuscire nell’abbassamento del valore, <a href="https://wwwnc.cdc.gov/eid/article/25/1/17-1901_article" target="_blank" rel="noopener">fin sotto l’1</a>, ovvero avere che un infetto contagia meno di una persona: a quel punto l’epidemia inizierà finalmente a regredire.</p>
+
+    <p><strong>Flattening The Curve -</strong> <strong>appiattire la curva</strong></p>
+
+    <p><a href="https://www.vox.com/2020/3/10/21171481/coronavirus-us-cases-quarantine-cancellation" target="_blank" rel="noopener">L’obiettivo delle restrizioni imposte dal governo</a> non è necessariamente diminuire il numero totale e finale dei casi, ma cercare di “spargerlo nel tempo”- appiattire la curva d’andamento dei contagi. Così facendo si può contenere la pandemia, rallentare il picco, permettere agli enti sanitari di attrezzarsi, ed evitare il sovraffollamento degli ospedali con conseguente possibile collasso del sistema sanitario (appiattendo la curva rossa e rendendola curva blu).</p>
+
+    <p>Il metodo migliore e più efficace per riuscire a temporeggiare, finché non avremo un vaccino, è quello di controllare i nostri contatti sociali. Quando un incontro fra possibili suscettibili ed infetti viene evitato, il valore <strong>β</strong> viene diminuito: quest’operazione può abbassare drasticamente il tasso di mortalità, prevenire il collasso del sistema sanitario, e salvare vite.</p>
+
+    <p>In vista della parziale riapertura in Italia, l’allentamento delle misure contenitive, e l’inizio della fase due, è particolarmente importante riconoscere la complessità alla base dell’epidemia, e soprattutto fare la propria parte rispettando le norme d’igiene e il distacco sociale.</p>
+
+    <p class="article-sign">Sara Spagnoletto</p>
+  </div>
+
+  <div class="article-foot">
+    <a class="btn" href="https://www.madaadvances.com/cosafacciamo.html">&larr; Tutti gli articoli</a>
+    <a class="btn outline" href="https://www.madaadvances.com/index.html">Vai alla home</a>
+  </div>
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-logo"><img src="https://www.madaadvances.com/images/logo-pink.png" alt="Mada Advances"></div>
+    <nav class="footer-nav" aria-label="Menu del piè di pagina">
+      <ul>
+        <li><a href="https://www.madaadvances.com/index.html">Home</a></li>
+        <li><a href="https://www.madaadvances.com/chisiamo.html">Chi siamo</a></li>
+        <li><a href="https://www.madaadvances.com/cosafacciamo.html">Cosa facciamo</a></li>
+        <li><a href="https://www.madaadvances.com/portfolio.html">Portfolio</a></li>
+        <li><a href="https://www.madaadvances.com/contattaci.html">Contattaci</a></li>
+      </ul>
+    </nav>
+    <p class="copyright">&copy; 2020&ndash;2026 Mada Advances &middot; Divulgazione scientifica tutta al femminile</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "La matematica dietro le epidemie",
+  "datePublished": "2020-04-19",
+  "inLanguage": "it",
+  "image": "https://static.wixstatic.com/media/1cd938_237ad3cf8f9e44a5a6f06f7a10ec8fd8~mv2.jpg/v1/fill/w_1000,h_978,al_c,q_85,usm_0.66_1.00_0.01/1cd938_237ad3cf8f9e44a5a6f06f7a10ec8fd8~mv2.jpg",
+  "author": {
+    "@type": "Person",
+    "name": "Carlotta Jarach"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mada Advances",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.madaadvances.com/images/logo.png"
+    }
+  },
+  "mainEntityOfPage": "https://www.madaadvances.com/post/la-matematica-dietro-le-epidemie/"
+}
+</script>
+
+<script>
+  (function(){
+    var b=document.querySelector('.nav-toggle'),n=document.querySelector('.main-nav');
+    if(b&&n){b.addEventListener('click',function(){
+      var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);});}
+  })();
+</script>
+</body>
+</html>
